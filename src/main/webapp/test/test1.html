@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>回顾 js & jquery</title>
+<script src="/springMVC1/js/jquery.js"></script>
+<script>
+	$(function(){
+		alert('nihao');
+		$('#div').load(
+			'/springMVC1/demo.do?method=hello',
+			function(response){
+				alert(response);
+			}
+		);
+	});
+</script>
+</head>
+<body>
+<a id="a" href="javaScript:(0)">aaaaaaaaaaaaaaa</a>
+<p id="p">nihao</p>
+<input type="button" id="btn" value="button" />
+<div id="div" style="border: 5px solid red; width: 500px; height: 500px;">
+	
+</div>
+</body>
+</html>

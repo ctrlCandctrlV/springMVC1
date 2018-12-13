@@ -1,0 +1,3 @@
+#macro(common)
+<h1>this is the common library for macro</h1>
+#end
