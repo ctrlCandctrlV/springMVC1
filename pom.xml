@@ -6,6 +6,12 @@
   <packaging>war</packaging>
   
   <dependencies>
+  	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-core</artifactId>
+	    <version>4.3.8.RELEASE</version>
+	</dependency>
+  
 <!-- springmvc -->
   	<dependency>
 	    <groupId>org.springframework</groupId>

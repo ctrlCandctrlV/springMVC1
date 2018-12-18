@@ -26,7 +26,7 @@
             value="org.springframework.web.servlet.view.JstlView" />
         <property name="order" value="1" />
         <!-- controller 返回的一个逻辑视图名经过前后缀的处理返回物理视图 -->
-        <property name="prefix" value="/jsp/" />
+        <property name="prefix" value="/WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
     </bean>
     

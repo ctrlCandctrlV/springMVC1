@@ -2,10 +2,13 @@ package com.liujie.mvc.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.liujie.mvc.service.IDemo;
 
 @Controller
 @RequestMapping("/demo.do")
@@ -23,6 +26,8 @@ public class DemoController {
 		log.info("DemoController �ɹ���!!!!!!!!");
 		return "demo";
 	}*/
+	@Autowired
+	public IDemo demo;
 	
 	@RequestMapping(params="method=login")
 	public String  login() {
@@ -31,9 +36,10 @@ public class DemoController {
 	}
 	
 	@RequestMapping(params="method=hello")
-	public String  hello(Model model) {
-		log.info("--------------------------------");
-		model.addAttribute("name", "yinshi");
-		return "demo";
+	public String  hello(String name, Model model) {
+		log.info("----------- hello ---------------------");
+		String result = demo.sayHello(name);
+		model.addAttribute("result", result);
+		return "showResult";
 	}
 }
