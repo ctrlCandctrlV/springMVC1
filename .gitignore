@@ -1,3 +1,4 @@
 /target/
 .setting
 .classpath
+.project
