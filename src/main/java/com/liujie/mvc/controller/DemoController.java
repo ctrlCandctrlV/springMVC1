@@ -42,4 +42,18 @@ public class DemoController {
 		model.addAttribute("result", result);
 		return "showResult";
 	}
+	
+	@RequestMapping(params="method=jsp")
+	public String  jsp(Model model) {
+		log.info("----------- jsp ---------------------");
+		model.addAttribute("result", "result for jsp");
+		return "showResult";
+	}
+	
+	@RequestMapping(params="method=vm")
+	public String  vm(Model model) {
+		log.info("----------- vm ---------------------");
+		model.addAttribute("result", "result for vm");
+		return "demo";
+	}
 }
